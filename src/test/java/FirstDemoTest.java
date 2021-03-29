@@ -53,6 +53,8 @@ public class FirstDemoTest {
         webDriver.navigate().back();
         webDriver.findElement(By.partialLinkText("Te")).click();
         webDriver.navigate().back();
+        webDriver.findElement(By.cssSelector("input#email")).sendKeys("tag#id");
+        webDriver.findElement(By.cssSelector("input.span6")).sendKeys("tag.class");
 
     }
 
