@@ -50,7 +50,8 @@ public class FirstDemoTest {
         webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
         System.out.println(webDriver.getTitle());
         webDriver.findElement(By.linkText("Welcome")).click();
-        webDriver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
+        webDriver.navigate().back();
+        webDriver.findElement(By.partialLinkText("Te")).click();
         webDriver.navigate().back();
 
     }
