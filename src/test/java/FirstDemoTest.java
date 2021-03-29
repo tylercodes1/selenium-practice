@@ -43,7 +43,7 @@ public class FirstDemoTest {
         webDriver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("Xpath sender");
         System.out.println("Relative xpath");
         webDriver.findElement(By.xpath("//*[@title='Search']")).sendKeys("relative xpath");
-//        webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
+        webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
     }
 
     @After
