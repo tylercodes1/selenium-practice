@@ -8,11 +8,16 @@ public class FirstDemoTest {
 
     @Test
     public void test() {
+        // grab webdriver location
         System.setProperty("webdriver.chrome.driver", System.getenv("SYSTEM_PATH"));
         Assert.assertTrue(true);
 
+        // instantiate webdriver and go to google.com
         webDriver = new ChromeDriver();
         webDriver.get("http://google.com");
+
+        // Maximize the window
+        webDriver.manage().window().maximize();
 
     }
 }
