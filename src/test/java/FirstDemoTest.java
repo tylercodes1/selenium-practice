@@ -59,8 +59,12 @@ public class FirstDemoTest {
         webDriver.findElement(By.cssSelector("input[id=name]")).sendKeys("tag[attribute=value]");
         webDriver.findElement(By.cssSelector("textarea.span6[id=address]")).sendKeys("tag.class[attribute=value]");
         new Select(webDriver.findElement(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/fieldset[2]/div[1]/div/select"))).selectByVisibleText("Mastercard");
-        webDriver.findElement(By.xpath("//*[@id=\"card_number\"]")).sendKeys("8008135");
+        webDriver.findElement(By.xpath("//*[@id='card_number']")).sendKeys("8008135");
         webDriver.findElement(By.xpath("//input[contains(@id, 'cardholder_name')]")).sendKeys("Conatins()");
+        // AND, OR, starts-with not seeming to work
+//        webDriver.findElement(By.xpath("//*input[@type='textarea' OR @id='verification_code']")).sendKeys("OR ");
+//        webDriver.findElement(By.xpath("//*input[@type='text' AND @id='verification_code' AND @class='span1']")).sendKeys("AND");
+//        webDriver.findElement(By.xpath("//input[starts-with(@id, 'verification-code')]")).sendKeys("starts-with");
     }
 
     @After
