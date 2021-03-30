@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
 
@@ -55,7 +56,11 @@ public class FirstDemoTest {
         webDriver.navigate().back();
         webDriver.findElement(By.cssSelector("input#email")).sendKeys("tag#id");
         webDriver.findElement(By.cssSelector("input.span6")).sendKeys("tag.class");
-
+        webDriver.findElement(By.cssSelector("input[id=name]")).sendKeys("tag[attribute=value]");
+        webDriver.findElement(By.cssSelector("textarea.span6[id=address]")).sendKeys("tag.class[attribute=value]");
+        new Select(webDriver.findElement(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/fieldset[2]/div[1]/div/select"))).selectByVisibleText("Mastercard");
+        webDriver.findElement(By.xpath("//*[@id=\"card_number\"]")).sendKeys("8008135");
+        webDriver.findElement(By.xpath("//input[contains(@id, 'cardholder_name')]")).sendKeys("Conatins()");
     }
 
     @After
