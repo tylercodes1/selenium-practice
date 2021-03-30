@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -65,6 +66,16 @@ public class FirstDemoTest {
 //        webDriver.findElement(By.xpath("//*input[@type='textarea' OR @id='verification_code']")).sendKeys("OR ");
 //        webDriver.findElement(By.xpath("//*input[@type='text' AND @id='verification_code' AND @class='span1']")).sendKeys("AND");
 //        webDriver.findElement(By.xpath("//input[starts-with(@id, 'verification-code')]")).sendKeys("starts-with");
+        System.out.println(webDriver.findElements(By.tagName("a")).size());
+        WebElement webElement = webDriver.findElement(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/div/button"));
+        System.out.println(webElement.isDisplayed());
+        System.out.println(webElement.isEnabled());
+        System.out.println(webElement.isSelected());
+        System.out.println(webElement.getText());
+        System.out.println(webElement.getTagName());
+        System.out.println(webElement.getCssValue("background-color"));
+        System.out.println(webElement.getSize());
+        System.out.println(webElement.getLocation());
     }
 
     @After
