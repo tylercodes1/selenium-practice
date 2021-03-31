@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.sql.Time;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class FirstDemoTest {
@@ -109,6 +110,17 @@ public class FirstDemoTest {
 //            Thread.sleep(1000);
 //        }
 //    }
+
+    @Test
+    public void multipleTabsTest() {
+        webDriver.navigate().to("https://vaccinelocator.doh.wa.gov/locations/98006");
+        webDriver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[1]/div[2]/a")).click();
+        Set<String> windows = webDriver.getWindowHandles();
+        for (String tab : windows) {
+            webDriver.switchTo().window(tab);
+            System.out.println(webDriver.getTitle());
+        }
+    }
 
     @After
     public void tearDown() {
