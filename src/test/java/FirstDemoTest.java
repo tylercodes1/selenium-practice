@@ -6,9 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.openqa.selenium.interactions.Action;
 import java.sql.Time;
 import java.util.List;
 import java.util.Set;
@@ -120,6 +122,18 @@ public class FirstDemoTest {
 //            webDriver.switchTo().window(tab);
 //            System.out.println(webDriver.getTitle());
 //        }
+//    }
+
+//    @Test
+//    public void hover() throws InterruptedException {
+//        webDriver.navigate().to("https://www.amazon.com/");
+//        WebElement accountsAndLists = webDriver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/a[2]"));
+//        WebElement recommendations = webDriver.findElement(By.xpath("//*[@id=\"nav-al-your-account\"]/a[3]"));
+//        Actions actions = new Actions(webDriver);
+//        Thread.sleep(3000);
+//        actions.moveToElement(accountsAndLists).perform();
+//        Thread.sleep(3000);
+//        actions.moveToElement(recommendations).click().build().perform();
 //    }
 
     @After
