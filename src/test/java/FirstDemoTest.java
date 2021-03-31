@@ -1,3 +1,7 @@
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,6 +17,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.openqa.selenium.interactions.Action;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.Time;
 import java.util.List;
 import java.util.Set;
@@ -145,6 +154,26 @@ public class FirstDemoTest {
 //        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/fieldset[1]/div[1]/label")));
 //        String title = webDriver.getTitle();
 //        System.out.println(title);
+//    }
+
+//    @Test
+//    public void inputDataTest() throws IOException {
+//        // file path
+//        String filePath = System.getProperty("user.dir") + "\\Cred.xlsx";
+//        FileInputStream fileInputStream = new FileInputStream(filePath);
+//        XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
+//        XSSFSheet sheet = workbook.getSheet("Sheet1");
+//        int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
+//        webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
+//        for (int i = 1; i <= rowCount; i++) {
+//            webDriver.findElement(By.id("email")).sendKeys(sheet.getRow(i).getCell(0).getStringCellValue());
+//            webDriver.findElement(By.id("name")).sendKeys(sheet.getRow(i).getCell(1).getStringCellValue());
+//            Row newRow = sheet.getRow(i);
+//            Cell cell = newRow.createCell(2);
+//            cell.setCellValue(webDriver.findElement(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/fieldset[1]/div[" + i + "]/label")).getText());
+//        }
+//        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+//        workbook.write(fileOutputStream);
 //    }
 
     @After
