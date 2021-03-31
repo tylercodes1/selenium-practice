@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.sql.Time;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class FirstDemoTest {
@@ -96,10 +97,18 @@ public class FirstDemoTest {
 //        webDriver.findElement(By.id("nav-search-submit-button")).click();
 //    }
 
-    @Test
-    public void forCheckboxTest() {
-        webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
-    }
+//    @Test
+//    public void forCheckboxTest() throws InterruptedException {
+//        webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
+//        Select cardType = new Select(webDriver.findElement(By.id("card_type")));
+//        System.out.println(cardType.getAllSelectedOptions());
+//        List<WebElement> options = cardType.getOptions();
+//        for (WebElement e : options) {
+//            System.out.println(e.getText());
+//            cardType.selectByVisibleText(e.getText());
+//            Thread.sleep(1000);
+//        }
+//    }
 
     @After
     public void tearDown() {
