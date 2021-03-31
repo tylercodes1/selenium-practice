@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -134,6 +136,15 @@ public class FirstDemoTest {
 //        actions.moveToElement(accountsAndLists).perform();
 //        Thread.sleep(3000);
 //        actions.moveToElement(recommendations).click().build().perform();
+//    }
+
+//    @Test
+//    public void explicitWaitTest() {
+//        webDriver.navigate().to("http://www.practiceselenium.com/check-out.html");
+//        WebDriverWait wait = new WebDriverWait(webDriver, 30);
+//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/fieldset[1]/div[1]/label")));
+//        String title = webDriver.getTitle();
+//        System.out.println(title);
 //    }
 
     @After
