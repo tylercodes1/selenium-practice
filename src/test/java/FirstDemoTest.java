@@ -82,7 +82,8 @@ public class FirstDemoTest {
 ////        webDriver.findElement(By.xpath("//input[starts-with(@id, 'verification-code')]")).sendKeys("starts-with");
 //        System.out.println(webDriver.findElements(By.tagName("a")).size());
 //        WebElement webElement = webDriver.findElement(By.xpath("/html/body/div/div/div[1]/div/div[1]/div/div/form/div/button"));
-//        System.out.println(webElement.isDisplayed());
+//        webElement.
+    //        System.out.println(webElement.isDisplayed());
 //        System.out.println(webElement.isEnabled());
 //        System.out.println(webElement.isSelected());
 //        System.out.println(webElement.getText());
@@ -178,10 +179,10 @@ public class FirstDemoTest {
 //        FileUtils.copyFile(srcFile, new File("C:\\Users\\tyler\\Documents\\GoogleImg.png"));
 //    }
 
-    @Test
-    public void testRunnerTest() {
-        System.out.println("FirstDemoTest TestRunnerTest");
-    }
+//    @Test
+//    public void testRunnerTest() {
+//        System.out.println("FirstDemoTest TestRunnerTest");
+//    }
 
     @After
     public void tearDown() {
