@@ -29,7 +29,7 @@ public class FirstDemoTest {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver",System.getenv("SYSTEM_PATH"));
+        System.setProperty("webdriver.chrome.driver", System.getenv("SYSTEM_PATH"));
         webDriver = new ChromeDriver();
         webDriver.get(url);
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -178,10 +178,14 @@ public class FirstDemoTest {
 //        FileUtils.copyFile(srcFile, new File("C:\\Users\\tyler\\Documents\\GoogleImg.png"));
 //    }
 
+    @Test
+    public void testRunnerTest() {
+        System.out.println("FirstDemoTest TestRunnerTest");
+    }
+
     @After
     public void tearDown() {
-
-//        webDriver.close();
+        webDriver.close();
 //        webDriver.quit();
     }
 }
