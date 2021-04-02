@@ -35,7 +35,8 @@ public class FirstTestNG {
         webDriver.findElement(By.xpath("//input[@title='Search']//self::input")).sendKeys("self::input");
         Thread.sleep(2000);
         System.out.println(webDriver.findElements(By.xpath("//form[@method='GET']//descendant::div")).size());
-        
+        // self::node() does not work m8
+        //        System.out.println(webDriver.findElements(By.xpath("//form[@method='GET']//self::node()")).size());
     }
 
     @DataProvider
