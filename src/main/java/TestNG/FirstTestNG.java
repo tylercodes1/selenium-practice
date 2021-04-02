@@ -3,6 +3,7 @@ package TestNG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
 public class FirstTestNG {
@@ -13,7 +14,9 @@ public class FirstTestNG {
     @Parameters({"browserName","url"})
     public void setup(@Optional("Chrome")String browserName, String url) {
         System.setProperty("webdriver.chrome.driver", System.getenv("SYSTEM_PATH"));
-        webDriver = new ChromeDriver();
+        ChromeOptions co = new ChromeOptions();
+        co.setAcceptInsecureCerts(true);
+        webDriver = new ChromeDriver(co);
         webDriver.get(url);
     }
 
