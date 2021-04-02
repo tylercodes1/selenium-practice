@@ -25,6 +25,11 @@ public class FirstTestNG {
         webDriver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys(username + " " + password + " ");
     }
 
+    @Test
+    public void predicatesTest() {
+        System.out.println(webDriver.findElement(By.xpath("//div//following::center")).getTagName());;
+    }
+
     @DataProvider
     public Object[][] getData() {
         Object[][] data = new Object[3][2];
