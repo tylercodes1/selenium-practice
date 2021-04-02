@@ -29,6 +29,7 @@ public class FirstTestNG {
     public void predicatesTest() {
         System.out.println(webDriver.findElement(By.xpath("//div//following::center")).getTagName());
         System.out.println(webDriver.findElements(By.xpath("//div//following::center//ancestor::div")).size());
+        System.out.println(webDriver.findElement(By.xpath("//div//following::center//ancestor::div[2]")).getLocation());
     }
 
     @DataProvider
