@@ -26,12 +26,14 @@ public class FirstTestNG {
     }
 
     @Test
-    public void predicatesTest() {
+    public void predicatesTest() throws InterruptedException {
         System.out.println(webDriver.findElement(By.xpath("//div//following::center")).getTagName());
         System.out.println(webDriver.findElements(By.xpath("//div//following::center//ancestor::div")).size());
         System.out.println(webDriver.findElement(By.xpath("//div//following::center//ancestor::div[2]")).getLocation());
         System.out.println(webDriver.findElements(By.xpath("//div//following::center//child::input")).size());
         System.out.println(webDriver.findElements(By.xpath("//input[@title='Search']//parent::div")).size());
+        webDriver.findElement(By.xpath("//input[@title='Search']//self::input")).sendKeys("self::input");
+        Thread.sleep(2000);
     }
 
     @DataProvider
