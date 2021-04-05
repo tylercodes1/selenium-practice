@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="groupTest">
+    <test name="Test">
+        <groups>
+            <define name="Colors">
+                <include name="Light"/>
+                <include name="Dark"/>
+                <include name="Medium"/>
+            </define>
+            <run>
+<!--                <include name="Light"/>-->
+                <include name="Colors"/>
+                <exclude name="Medium"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="Misc.GroupsTestNG"></class>
+        </classes>
+    </test>
+</suite>
+       
